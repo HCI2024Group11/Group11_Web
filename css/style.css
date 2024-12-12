@@ -4,14 +4,15 @@
   box-sizing: border-box;
   /* overflow-x: hidden; */
 }
-
 :root {
   --background-color-dark-blue: #003366;
   --background-color-light-blue: #5ab9ea;
   --background-color-pale-blue: #00bfff;
   --background-color-white: white;
+  --text-color-dark: #333;
+  --text-color-light: #666;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -25,6 +26,8 @@
 
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
   line-height: 1.6;
   background-color: #f4f4f4;
 }
@@ -38,8 +41,22 @@ header {
   padding: 20px;
 }
 
-header .logo h1 {
-  margin-left: 20px;
+.logo {
+  padding-left: 50px; /* Nhích vào trong từ mép bên trái của nội dung */
+}
+.logo a {
+  text-decoration: none; /* Loại bỏ gạch chân liên kết */
+  color: #e0e8f1; /* Màu chữ */
+}
+
+.logo a:hover {
+  color: #6f8697; /* Hiệu ứng khi di chuột vào logo */
+}
+
+.logo h1 {
+  font-size: 3rem; /* Cỡ chữ */
+  font-family: Arial, sans-serif; /* Font chữ */
+  margin: 0; /* Xóa khoảng cách mặc định */
 }
 
 nav ul {
@@ -78,10 +95,7 @@ nav ul li a:hover {
   padding: 50px;
   background-repeat: no-repeat;
   background-size: 100%;
-  /* background-color: #00bfff; */
-  color: var(--background-color-light-blue);
-  /* height: 300px; */
-  /* position: absolute; */
+  color: var(--background-color-dark-blue);
 }
 
 iframe {
@@ -105,103 +119,64 @@ iframe {
 .hero p {
   font-size: 1.2em;
 }
-/* update fix lỗi trnag index */
-.member-profiles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
 
 /* Style for each member card */
+/* Style for each member card */
 .member {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  padding: 20px;
-  width: calc(20% - 20px); /* Show all cards in a row on larger screens */
-  max-width: 300px;
-  box-sizing: border-box;
+  text-align: left; /* Thông tin canh trái */
+  width: 100%; /* Chiếm toàn bộ chiều ngang */
+  max-width: 95%; /* Giới hạn kích thước tối đa */
+  margin: 10px auto; /* Căn giữa trên màn hình */
 }
 
-/* Style for images inside each card */
+/* Style for member image */
 .member img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 15px;
+  width: 150px; /* Kích thước ảnh lớn hơn */
+  height: 150px; /* Kích thước ảnh lớn hơn */
+  margin-right: 80px; /* Khoảng cách giữa ảnh và thông tin */
+  margin-left: 50; /* Sát mép trái */
+  border-radius: 50%; /* Làm tròn ảnh */
 }
 
-/* Member name and description */
+/* Style for member information */
+.member-info {
+  flex: 1; /* Chiếm toàn bộ không gian còn lại */
+  margin-left: 0; /* Xóa khoảng cách bên trái */
+}
+
 .member h4 {
-  font-size: 1.2em;
-  margin: 10px 0 5px;
+  font-size: 1.5em; /* Phóng to tên thành viên */
+  color: var(--background-color-dark-blue);
+  margin-bottom: 10px;
 }
 
 .member p {
+  font-size: 1.2em; /* Làm chữ mô tả lớn hơn */
   color: #666;
-  font-size: 0.9em;
-  margin: 0;
+  margin: 5px 0;
 }
 
 /* Responsive layout for smaller screens */
 @media (max-width: 768px) {
   .member {
-    width: 100%; /* Full width for each card on smaller screens */
+    flex-direction: column; /* Ảnh và thông tin xếp dọc trên màn hình nhỏ */
+    text-align: center;
   }
-}
 
-/* Group Overview Section */
-.group-overview {
-  padding: 50px;
-  background-color: #f0f0f0;
-  text-align: center;
-}
+  .member img {
+    margin: 0 auto 20px auto; /* Căn giữa ảnh */
+  }
 
-.group-overview h2,
-.group-overview h3 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.group-overview p {
-  max-width: 800px;
-  margin: 0 auto 40px auto;
-}
-
-.member-profiles {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.member {
-  background-color: var(--background-color-white);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 200px;
-}
-
-.member img {
-  width: 100%;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.member h4 {
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.member p {
-  font-size: 14px;
-  color: #666;
+  .member-info {
+    text-align: center; /* Căn giữa thông tin */
+  }
 }
 
 * {
@@ -231,8 +206,10 @@ body {
 }
 .slide img {
   width: 100%;
-  height: 90vh; /* Đảm bảo hình ảnh chiếm toàn bộ chiều cao và chiều rộng */
+  height: 70vh; /* Đảm bảo hình ảnh chiếm toàn bộ chiều cao và chiều rộng */
   object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+  display: flex;
+  gap: 0; /* Loại bỏ khoảng cách giữa các phần tử */
 }
 .buttons {
   position: absolute;
@@ -265,40 +242,42 @@ body {
     height: 100%;
   }
 }
-
-/* --------------------------About page------------------------- */
-.team-title {
+/*--------------------------groupdiary-------------------------*/
+.container {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 90px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+.progress {
+  width: 100%;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.progress-bar {
+  height: 20px;
+  background-color: #4caf50; /* Màu xanh cho thanh tiến độ */
   text-align: center;
-  margin-bottom: 3rem;
-  color: var(--background-color-dark-blue);
+  color: white;
+  line-height: 20px; /* Canh giữa văn bản */
 }
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.member-card:hover {
-  transition: transform 0.3s ease;
-  transform: translateY(-5px);
-}
-
-.border-theme {
-  border: 3px solid var(--background-color-dark-blue) !important;
-}
-
-.social-links a {
-  color: #00b33c;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-  color: var(--background-color-pale-blue);
-  transform: translateY(-2px);
-}
-
 /* --------------------------project page------------------------- */
 .header-prjMenu {
   display: flex;
@@ -394,6 +373,33 @@ td {
   padding: 5px;
 }
 
+.content-section h2 {
+  text-align: center; /* Căn giữa chữ */
+  margin-bottom: 20px; /* Tạo khoảng cách dưới chữ */
+}
+.content-section p {
+  text-align: center;
+}
+
+table {
+  width: 80%; /* Đặt chiều rộng bảng là 95% màn hình */
+  margin: 0 auto; /* Căn giữa bảng theo chiều ngang */
+  border-collapse: collapse; /* Gộp các đường viền bảng */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng bóng nhẹ */
+}
+
+table th,
+table td {
+  padding: 10px; /* Tạo khoảng cách bên trong ô */
+  text-align: left; /* Căn lề trái cho nội dung ô */
+  border: 1px solid #ccc; /* Đường viền giữa các ô */
+}
+
+table th {
+  background-color: #f4f4f4; /* Màu nền cho tiêu đề bảng */
+  font-weight: bold; /* Chữ in đậm */
+}
+
 /*             THIS IS DESIGN PART CSS*/
 
 .button-list {
@@ -457,9 +463,9 @@ td {
 }
 /*         THIS IS TECHNICAL PART CSS */
 /* .header-technical {
-    padding: 40px;
-    background-color: #3a5335;
-    color: white;
+  padding: 40px;
+  background-color: #3a5335;
+  color: white;
 } */
 .h1-header {
   font-size: 40px;
