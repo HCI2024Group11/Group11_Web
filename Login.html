@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Learning Platform - Authentication</title>
+    <link rel="stylesheet" href="css/Login.css" />
+  </head>
+  <body>
+    <!-- Register Form -->
+    <div class="container" id="registerForm">
+      <button class="back-btn" onclick="toggleForms()">< Back</button>
+      <h1>Create an account</h1>
+      <p class="login-text">
+        Already have an account? <a href="#" onclick="toggleForms()">Log in</a>
+      </p>
+      <form>
+        <div class="input-group">
+          <input type="text" placeholder="Name" required />
+          <input type="text" placeholder="Last Name" required />
+        </div>
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Enter your password" required />
+        <div class="checkbox-group">
+          <input type="checkbox" id="agree" required />
+          <label for="agree">I agree to the terms and conditions</label>
+        </div>
+        <button type="submit" class="btn">Create account</button>
+        <div class="divider">Or register with</div>
+        <div class="social-buttons">
+          <button type="button" class="social-btn">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+              alt="Google"
+            />
+            Google
+          </button>
+          <button type="button" class="social-btn">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png"
+              alt="Facebook"
+            />
+            Facebook
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Login Form -->
+    <div class="container hidden" id="loginForm">
+      <button class="back-btn" onclick="toggleForms()">< Back</button>
+      <h1>LOG IN</h1>
+      <p class="login-text">
+        Don't have an account? <a href="#" onclick="toggleForms()">Register</a>
+      </p>
+      <form>
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Enter your password" required />
+        <a href="#" class="forgot-password" onclick="showForgotPasswordForm()"
+          >Forgot password?</a
+        >
+        <button type="submit" class="btn">Log in</button>
+        <div class="divider">Or login with</div>
+        <div class="social-buttons">
+          <button type="button" class="social-btn">
+            <img src="img/logogg.jpg" alt="Google" />
+            Google
+          </button>
+          <button type="button" class="social-btn">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png"
+              alt="Facebook"
+            />
+            Facebook
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Forgot Password Form -->
+    <div class="container hidden" id="forgotPasswordForm">
+      <button class="back-btn" onclick="toggleForms()">< Back</button>
+      <h1>Forgot password?</h1>
+      <p class="message">No worries, we'll send you reset instructions.</p>
+      <form onsubmit="handleForgotPassword(event)">
+        <label for="resetEmail" class="label">Email</label>
+        <input
+          type="email"
+          id="resetEmail"
+          placeholder="Enter your email"
+          required
+        />
+        <button type="submit" class="btn">Reset password</button>
+
+        <div class="success-message hidden" id="successMessage">
+          Password reset instructions have been sent to your email!
+        </div>
+        <div class="error-message hidden" id="errorMessage">
+          Email not found. Please try again.
+        </div>
+      </form>
+    </div>
+
+    <!-- Code Entry Form for Password Reset -->
+    <div class="container hidden" id="codeEntryForm">
+      <button class="back-btn" onclick="showForgotPasswordForm()">
+        < Back
+      </button>
+      <h1>Password reset</h1>
+      <p class="message">We'll send you reset instructions.</p>
+
+      <!-- Code Entry Inputs -->
+      <div class="code-inputs">
+        <input type="text" maxlength="1" class="code-input" required />
+        <input type="text" maxlength="1" class="code-input" required />
+        <input type="text" maxlength="1" class="code-input" required />
+        <input type="text" maxlength="1" class="code-input" required />
+      </div>
+
+      <button class="btn" onclick="showSetNewPasswordForm()">Continue</button>
+      <p class="resend-text">
+        Didn't receive the email?
+        <a href="#" onclick="resendCode()">Click to resend</a>
+      </p>
+    </div>
+
+    <!-- Set New Password Form -->
+    <div class="container hidden" id="setNewPasswordForm">
+      <button class="back-btn" onclick="showCodeEntryForm()">< Back</button>
+      <h1>Set new password</h1>
+      <p class="message">We'll send you reset instructions.</p>
+      <form onsubmit="resetPassword(event)">
+        <label class="label">Password</label>
+        <input
+          type="password"
+          id="newPassword"
+          placeholder="Enter new password"
+          required
+        />
+
+        <label class="label">Confirm password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          placeholder="Confirm new password"
+          required
+        />
+
+        <button type="submit" class="btn">Reset password</button>
+      </form>
+      <div class="success-message hidden" id="passwordSuccessMessage">
+        Your password has been reset successfully!
+      </div>
+      <div class="error-message hidden" id="passwordErrorMessage">
+        Passwords do not match. Please try again.
+      </div>
+    </div>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>
