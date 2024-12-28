@@ -8,7 +8,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="css/Home.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -16,7 +15,7 @@
     <header>
       <div class="logo">
         <a href="index.html">
-          <h1>GROUP 20</h1>
+          <h1>GROUP 11</h1>
         </a>
       </div>
 
@@ -27,172 +26,157 @@
             <li><a href="AboutUs.html">About</a></li>
             <li><a href="Groupdiary.html">Group diary</a></li>
             <li><a href="project.html">Project</a></li>
-            <a href="https:/" class="btn">Go to project</a>
+            <li><a href="result.html">Result</a></li>
+            <a href="https://hci2024group11.github.io/Project_Web/" class="btn">Go to project</a>
           </ul>
         </nav>
       </div>
     </header>
-    <div class="projectBigText">
-      <h1 class="fs-1">The journey of our project development</h1>
-    </div>
-    <div class="container">
-      <!-- Section 1: Giới thiệu -->
-      <h2>1. Giới thiệu chung</h2>
-      <p>
-        Mục đích của nhật ký nhóm là theo dõi tiến độ công việc và đánh giá sự
-        đóng góp của từng thành viên trong dự án: "Phát triển một trang web hỗ
-        trợ sinh viên học IELTS".
-      </p>
+    <main class="container my-5">
+      <section>
+        <h1 class="fs-1 text-center mb-4">The Journey of Our Project Development</h1>
 
-      <!-- Section 2: Bảng phân công công việc -->
-      <h2>2. Bảng phân công công việc</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Thành viên</th>
-            <th>Nhiệm vụ</th>
-            <th>Tiến độ</th>
-            <th>Ngày bắt đầu</th>
-            <th>Hạn hoàn thành</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Chu Tấn Tài</td>
-            <td>Thiết kế giao diện frontend</td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar" style="width: 100%">100%</div>
-              </div>
-            </td>
-            <td>02/12/2024</td>
-            <td>08/12/2024</td>
-          </tr>
-          <tr>
-            <td>Châu Thị Thúy Quỳnh</td>
-            <td>Nghiên cứu tài liệu IELTS</td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar" style="width: 40%">40%</div>
-              </div>
-            </td>
-            <td>05/12/2024</td>
-            <td>12/12/2024</td>
-          </tr>
-          <tr>
-            <td>Trần Lê Phúc An</td>
-            <td>Lập trình backend</td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar" style="width: 50%">50%</div>
-              </div>
-            </td>
-            <td>01/12/2024</td>
-            <td>10/12/2024</td>
-          </tr>
-          <tr>
-            <td>Châu Thị Thúy Quỳnh</td>
-            <td>Hoàn thành tài liệu dự án</td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar" style="width: 70%">70%</div>
-              </div>
-            </td>
-            <td>03/12/2024</td>
-            <td>08/12/2024</td>
-          </tr>
-          <tr>
-            <td>Trần Lê Phúc An</td>
-            <td>Thiết kế giao diện trang "About Us"</td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar" style="width: 30%">30%</div>
-              </div>
-            </td>
-            <td>04/12/2024</td>
-            <td>10/12/2024</td>
-          </tr>
-        </tbody>
-      </table>
+        <div class="d-flex flex-column align-items-center">
+          <ul class="nav nav-tabs" id="weekTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" data-week="1">Week 1</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-week="2">Week 2</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-week="3">Week 3</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-week="4">Week 4</button>
+            </li>
+          </ul>
+        </div>
 
-      <!-- Section 3: Ghi chép hàng ngày -->
-      <h2>3. Ghi chép hàng ngày</h2>
-      <h3>Ngày 01/12/2024:</h3>
-      <ul>
-        <li>Chu Tấn Tài đã tạo cơ sở dữ liệu cho hệ thống.</li>
-        <li>Trần Lê Phúc An hoàn thành giao diện trang "About Us".</li>
-        <li>
-          Châu Thị Thúy Quỳnh gặp khó khăn trong việc tìm tài liệu phù hợp.
-        </li>
-      </ul>
-      <h3>Ngày 02/12/2024:</h3>
-      <ul>
-        <li>Họp nhóm để thảo luận về tiến độ.</li>
-        <li>Phân công lại nhiệm vụ cho tuần tiếp theo.</li>
-      </ul>
+        <div class="table-responsive mt-4">
+          <table class="table table-bordered shadow-sm" id="workTable">
+            <thead class="table-dark">
+              <tr>
+                <th>Stt</th>
+                <th>Mã SV</th>
+                <th>Họ tên</th>
+                <th>Công việc được giao</th>
+                <th>Kết quả</th>
+                <th>Tiến độ</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <!-- Nội dung bảng sẽ được tạo động bằng JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const weeklyData = {
+        1: [
+          {
+            stt: 1,
+            mssv: "23130280",
+            name: "Chu Tấn Tài",
+            work: "Thiết kế giao diện frontend",
+            result: "Hoàn thành",
+            completion: 100,
+          },
+          {
+            stt: 2,
+            mssv: "23130265",
+            name: "Châu Thị Thúy Quỳnh",
+            work: "Nghiên cứu tài liệu IELTS, Hoàn thành tài liệu dự án",
+            result: "Hoàn thành",
+            completion: 100,
+          },
+          {
+            stt: 3,
+            mssv: "23130004",
+            name: "Trần Lê Phúc An",
+            work: "Lập trình backend, Thiết kế giao diện trang About Us",
+            result: "Hoàn thành",
+            completion: 100,
+          },
+        ],
+        2: [],
+        3: [],
+        4: [],
+      };
 
-      <!-- Section 4: Vấn đề gặp phải -->
-      <h2>4. Vấn đề gặp phải và cách giải quyết</h2>
-      <p><strong>Vấn đề:</strong> Phân quyền đăng nhập bị lỗi.</p>
-      <p>
-        <strong>Cách giải quyết:</strong> Tham khảo tài liệu Spring Security,
-        chỉnh sửa code.
-      </p>
-      <p><strong>Người giải quyết:</strong> Trần Lê Phúc An</p>
+      function generateProgressBar(percentage) {
+        const colorClass =
+          percentage >= 90
+            ? "bg-success"
+            : percentage >= 70
+            ? "bg-primary"
+            : percentage >= 50
+            ? "bg-warning"
+            : "bg-danger";
 
-      <!-- Section 5: Tổng kết công việc theo tuần -->
-      <h2>5. Tổng kết công việc theo tuần</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Tổng kết</th>
-            <th>Tiến độ</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Tuần 1</td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar" style="width: 80%">80%</div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>Tuần 2</td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar" style="width: 50%">50%</div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>Tuần 3</td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar" style="width: 30%">30%</div>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+        return `
+          <div class="progress">
+            <div
+              class="progress-bar ${colorClass}"
+              role="progressbar"
+              style="width: ${percentage}%;"
+              aria-valuenow="${percentage}"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              ${percentage}%
+            </div>
+          </div>
+        `;
+      }
 
-      <!-- Section 6: Kế hoạch sắp tới -->
-      <h2>6. Kế hoạch sắp tới</h2>
-      <ul>
-        <li>Hoàn thiện backend và tích hợp giao diện.</li>
-        <li>Hoàn chỉnh nội dung học IELTS.</li>
-        <li>Kiểm tra và sửa lỗi.</li>
-      </ul>
-    </div>
+      function updateTable(weekNumber) {
+        const tableBody = document.getElementById("tableBody");
+        const weekData = weeklyData[weekNumber] || [];
+
+        tableBody.innerHTML = weekData.length
+          ? weekData
+              .map(
+                (person) => `
+              <tr>
+                <td>${person.stt}</td>
+                <td>${person.mssv}</td>
+                <td>${person.name}</td>
+                <td>${person.work}</td>
+                <td>${person.result}</td>
+                <td>${generateProgressBar(person.completion)}</td>
+              </tr>`
+              )
+              .join("")
+          : `<tr><td colspan="6" class="text-center">No data available</td></tr>`;
+      }
+
+      document.querySelectorAll(".nav-link").forEach((tab) => {
+        tab.addEventListener("click", (e) => {
+          document
+            .querySelectorAll(".nav-link")
+            .forEach((t) => t.classList.remove("active"));
+          e.target.classList.add("active");
+          updateTable(e.target.getAttribute("data-week"));
+        });
+      });
+
+      // Hiển thị dữ liệu tuần 1 mặc định
+      updateTable(1);
+    </script>
+  
+    <!----------------------------------------->
+      
+     
 
     <footer>
       <div class="footer-container">
         <div class="footer-group-info">
-          <h3>GROUP</h3>
+          <h3>GROUP 11</h3>
           <p>
-            Hồ Chí Minh Nông Lâm University<br />Thủ Đức City, Hồ Chí Minh City,
-            Việt Nam
+            Nong Lam University - Ho Chi Minh City
           </p>
           <p>Phone: 0349647423<br />Email: 23130004@st.hcmuaf.edu.vn</p>
         </div>
@@ -204,20 +188,21 @@
             <li><a href="AboutUs.html">About us</a></li>
             <li><a href="Groupdiary.html">Group diary</a></li>
             <li><a href="project.html">Project</a></li>
+            <li><a href="result.html">Result</a></li>
           </ul>
         </div>
 
         <div class="footer-members">
           <h4>Our Members</h4>
           <ul>
-            <li><a href="https:/">Chu Tấn Tài</a></li>
+            <li><a href="https://taiplatform.github.io/">Chu Tấn Tài</a></li>
             <li>
               <a href="https://thuyqynh.github.io/BT_lab1/index.html"
                 >Châu Thị Thúy Quỳnh</a
               >
             </li>
             <li>
-              <a href="https://tranlephucan.github.io/web/">Trần Lê Phúc An</a>
+              <a href="https://tranlephucan.github.io/web">Trần Lê Phúc An</a>
             </li>
           </ul>
         </div>
@@ -227,8 +212,21 @@
           <form>
             <input type="email" placeholder="Email is here" required />
             <button type="submit">Submit</button>
-          </form>
-        </div>
+          </form> <br>
+          <!-- Phần đóng góp ý kiến -->
+          <div class="footer-feedback">
+            <h4><i class="fa fa-envelope"></i> Gửi ý kiến đóng góp</h4>
+            <form action="mailto:23130004@st.hcmuaf.edu.vn" method="POST" enctype="text/plain">
+              <textarea name="feedback" rows="4" placeholder="Nhập ý kiến của bạn tại đây..." required></textarea>
+              <button type="submit">Gửi ý kiến</button>
+            </form>
+          </div>
+
+        <!-- Thêm Font Awesome để hiển thị biểu tượng lá thư -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
       </div>
     </footer>
   </body>

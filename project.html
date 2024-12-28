@@ -8,14 +8,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="css/Home.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
     <header>
       <div class="logo">
         <a href="index.html">
-          <h1>GROUP 20</h1>
+          <h1>GROUP 11</h1>
         </a>
       </div>
 
@@ -26,545 +26,132 @@
             <li><a href="AboutUs.html">About</a></li>
             <li><a href="Groupdiary.html">Group diary</a></li>
             <li><a href="project.html">Project</a></li>
-            <a href="https:/" class="btn">Go to project</a>
+            <li><a href="result.html">Result</a></li>
+            <a href="https://hci2024group11.github.io/Project_Web/" class="btn"
+              >Go to project</a
+            >
           </ul>
         </nav>
       </div>
     </header>
 
-    <!------------------------------------------->
-
     <div class="projectBigText">
       <h1>Project</h1>
     </div>
-    <div class="header-prjMenu" style="position: sticky">
-      <div class="d-flex">
-        <ul class="nav nav-tabs flex-nowrap" id="weekTabs" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link active"
-              data-bs-toggle="tab"
-              data-week="1"
-              onclick="showSection('requirement')"
-            >
-              Requirement
-            </button>
+
+    <div class="main-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <ul>
+          <li>
+            <button onclick="showContent('requirement')">Requirement</button>
           </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              data-bs-toggle="tab"
-              data-week="2"
-              onclick="showSection('design')"
-            >
-              Design
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              data-bs-toggle="tab"
-              data-week="3"
-              onclick="showSection('implement')"
-            >
-              Implement
+          <li><button onclick="showContent('design')">Design</button></li>
+          <li>
+            <button onclick="showContent('implementation')">
+              Implementation
             </button>
           </li>
         </ul>
+      </aside>
+
+      <!-- Content Sections -->
+      <div class="content">
+        <div id="requirement" class="content-section" style="display: none">
+          <h2>Project Requirements</h2>
+          <p>
+            This is the content for the project requirements. You can add
+            details such as technical requirements, tools, and languages used.
+          </p>
+        </div>
+        <div id="design" class="content-section" style="display: none">
+          <h2>Project Design</h2>
+          <div class="design-section">
+            <!-- Design Item 1 -->
+            <div class="design-item">
+              <img src="https://via.placeholder.com/300" alt="Image 1" />
+              <h3>Design 1</h3>
+            </div>
+            <div class="design-item">
+              <img src="https://via.placeholder.com/300" alt="Image 2" />   
+            </div>
+            <div class="design-item">
+              <img src="https://via.placeholder.com/300" alt="Image 3" />
+                    </div>
+            <!-- Design Item 2 -->
+            <div class="design-item">
+              <img src="https://via.placeholder.com/300" alt="Image 4" />
+              <h3>Design 2</h3>
+            </div>
+            <div class="design-item">
+              <img src="https://via.placeholder.com/300" alt="Image 5" /> 
+            </div>
+            <div class="design-item">
+              <img src="https://via.placeholder.com/300" alt="Image 6" /> 
+            </div>
+             <!-- Design Item 1 -->
+             <div class="design-item">
+              <img src="https://via.placeholder.com/300" alt="Image 1" />
+              <h3>Design 1</h3>
+            </div>
+            <div class="design-item">
+              <img src="https://via.placeholder.com/300" alt="Image 2" />   
+            </div>
+            <div class="design-item">
+              <img src="https://via.placeholder.com/300" alt="Image 3" />
+            </div>
+            <!-- Design Item 2 -->
+            <div class="design-item">
+              <img src="https://via.placeholder.com/300" alt="Image 4" />
+              <h3>Design 2</h3>
+            </div>
+            <div class="design-item">
+              <img src="https://via.placeholder.com/300" alt="Image 5" />
+              
+            </div>
+            <div class="design-item">
+              <img src="https://via.placeholder.com/300" alt="Image 6" /> 
+            </div>
+             <!-- Design Item 1 -->
+             <div class="design-item">
+              <img src="https://via.placeholder.com/300" alt="Image 1" />
+              <h3>Design 1</h3>
+            </div>
+            <div class="design-item">
+              <img src="https://via.placeholder.com/300" alt="Image 2" />   
+            </div>
+            <div class="design-item">
+              <img src="https://via.placeholder.com/300" alt="Image 3" />
+                  </div>
+            <!-- Design Item 2 -->
+            <div class="design-item">
+              <img src="https://via.placeholder.com/300" alt="Image 4" />
+              <h3>Design 2</h3>
+            </div>
+            <div class="design-item">
+              <img src="https://via.placeholder.com/300" alt="Image 5" />
+                 </div>
+            <div class="design-item">
+              <img src="https://via.placeholder.com/300" alt="Image 6" /> 
+            </div>
+          </div>
+        </div>
+        </div>
+        <div id="implementation" class="content-section" style="display: none">
+          <h2>Project Implementation</h2>
+          <p>
+            This is the content for the project implementation. You can provide
+            details of the coding process, challenges, and solutions.
+          </p>
+        </div>
       </div>
     </div>
-
-    <section id="requirement" class="content-section">
-      <h2>1. Tổng Quan</h2>
-      <p>
-        Dự án này, <strong>Học IELTS trực tuyến</strong>, nhằm tạo ra một nền
-        tảng hiệu quả giúp sinh viên cải thiện kỹ năng IELTS (nghe, nói, đọc,
-        viết) một cách dễ dàng.
-      </p>
-
-      <h2>2. Tính năng</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Tính năng</th>
-            <th>Phân quyền</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Đăng Ký/Đăng Nhập</td>
-            <td>Người dùng</td>
-          </tr>
-          <tr>
-            <td>Truy Cập các bài học (nghe, nói, đọc, viết)</td>
-            <td>Người dùng</td>
-          </tr>
-          <tr>
-            <td>Thực hiện bài kiểm tra trực tuyến</td>
-            <td>Người dùng</td>
-          </tr>
-          <tr>
-            <td>Theo dõi tiến độ học tập và kết quả kiểm tra</td>
-            <td>Người dùng</td>
-          </tr>
-          <tr>
-            <td>Tìm kiếm bài học và tài nguyên</td>
-            <td>Người dùng</td>
-          </tr>
-          <tr>
-            <td>Gửi câu hỏi hoặc phản hồi</td>
-            <td>Người dùng</td>
-          </tr>
-          <tr>
-            <td>Quản lý bài học (thêm, sửa, xóa)</td>
-            <td>Quản trị viên</td>
-          </tr>
-          <tr>
-            <td>Quản lý tài khoản người dùng</td>
-            <td>Quản trị viên</td>
-          </tr>
-          <tr>
-            <td>Xem và phân tích tiến độ của người dùng</td>
-            <td>Quản trị viên</td>
-          </tr>
-          <tr>
-            <td>Quản lý nội dung bài kiểm tra</td>
-            <td>Quản trị viên</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>3. Phân công công việc</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Vai trò</th>
-            <th>Trách nhiệm</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Front-end Developer</td>
-            <td>Thiết kế và triển khai giao diện người dùng</td>
-          </tr>
-          <tr>
-            <td>Back-end Developer</td>
-            <td>Thiết lập logic phía máy chủ và tích hợp cơ sở dữ liệu</td>
-          </tr>
-          <tr>
-            <td>Người tạo nội dung</td>
-            <td>Chuẩn bị bài học, bài kiểm tra và tài liệu</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>4. Công nghệ sử dụng</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Công nghệ</th>
-            <th>Chi tiết</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Front-end</td>
-            <td>HTML, CSS, JavaScript (React, Angular, hoặc Vue)</td>
-          </tr>
-          <tr>
-            <td>Back-end</td>
-            <td>Java (Spring Boot), Node.js, hoặc PHP</td>
-          </tr>
-          <tr>
-            <td>Cơ sở dữ liệu</td>
-            <td>MySQL hoặc MongoDB</td>
-          </tr>
-          <tr>
-            <td>Công cụ</td>
-            <td>Git, Figma, Postman</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>5. Thời gian thực hiện</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Tuần</th>
-            <th>Nhiệm vụ</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Tuần 1</td>
-            <td>Thiết kế giao diện và sơ đồ cơ sở dữ liệu</td>
-          </tr>
-          <tr>
-            <td>Tuần 2</td>
-            <td>Triển khai logic front-end và back-end</td>
-          </tr>
-          <tr>
-            <td>Tuần 3</td>
-            <td>Tích hợp các tính năng và tiến hành kiểm tra</td>
-          </tr>
-          <tr>
-            <td>Tuần 4</td>
-            <td>Triển khai nền tảng và thu thập phản hồi</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>6. Yêu cầu phi chức năng</h2>
-      <p>
-        Giao diện thân thiện và phản hồi tốt. <br />
-        Khả năng tương thích với các thiết bị và trình duyệt khác nhau. <br />
-        An toàn cao cho dữ liệu người dùng. <br />
-        Mở rộng để xử lý nhiều người dùng.
-      </p>
-      <h2>7. Tài liệu tham khảo</h2>
-      <p>
-        Các tài liệu tham khảo bổ sung sẽ bao gồm tài nguyên học tập và các nền
-        tảng tương tự để lấy cảm hứng.
-      </p>
-    </section>
-
-    <section id="design" class="content-section" style="display: none">
-      <h2>Design</h2>
-      <div class="button-list">
-        <button class="expand-btn" onclick="toggleContent(0)">
-          Design của web nhóm:
-        </button>
-        <div class="content" id="content-0">
-          <div class="container">
-            <div>
-              <p class="left-p">Home</p>
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Placeholder Image 1"
-              />
-            </div>
-            <div>
-              <p class="left-p">About</p>
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Placeholder Image 2"
-              />
-            </div>
-            <div>
-              <p class="left-p">Groupdiary</p>
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Placeholder Image 2"
-              />
-            </div>
-            <div>
-              <p class="left-p">Project</p>
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Placeholder Image 2"
-              />
-            </div>
-            <div>
-              <p class="left-p">Requirement</p>
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Placeholder Image 2"
-              />
-            </div>
-            <div>
-              <p class="left-p">Design</p>
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Placeholder Image 2"
-              />
-            </div>
-            <div>
-              <p class="left-p">Implement</p>
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Placeholder Image 2"
-              />
-            </div>
-          </div>
-        </div>
-        <button class="expand-btn" onclick="toggleContent(1)">Project</button>
-        <div class="content" id="content-1">
-          <div class="container">
-            <div>
-              <p class="left-p">trang....</p>
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Placeholder Image 1"
-              />
-            </div>
-            <div>
-              <p class="left-p">tranng...</p>
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Placeholder Image 2"
-              />
-            </div>
-          </div>
-        </div>
-        <button class="expand-btn" onclick="toggleContent(1)">Login</button>
-        <div class="content" id="content-1">
-          <div class="container">
-            <div>
-              <p class="left-p">.....</p>
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Placeholder Image 1"
-              />
-            </div>
-            <div>
-              <p class="left-p">......</p>
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Placeholder Image 2"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="implement" class="content-section" style="display: none">
-      <h2>Implement</h2>
-      <button class="expand-btn" onclick="toggleContent(4)">
-        1. Cài đặt môi trường phát triển
-      </button>
-      <div class="content" id="content-4">
-        <table>
-          <thead>
-            <tr>
-              <th>Công cụ phát triển</th>
-              <th>Cài đặt</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>IDE</td>
-              <td>VS Code, IntelliJ</td>
-            </tr>
-            <tr>
-              <td>Hệ thống quản lý cơ sở dữ liệu</td>
-              <td>MySQL, MongoDB</td>
-            </tr>
-            <tr>
-              <td>Server</td>
-              <td>Apache, Nginx</td>
-            </tr>
-            <tr>
-              <td>Công cụ quản lý phiên bản</td>
-              <td>Git</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          Cài đặt framework: Cài đặt các framework phía frontend (React,
-          Angular) và backend (Spring Boot, Node.js).
-        </p>
-      </div>
-      <button class="expand-btn" onclick="toggleContent(5)">
-        2. Phát triển Front-End
-      </button>
-      <div class="content" id="content-5">
-        <table>
-          <thead>
-            <tr>
-              <th>Nội dung</th>
-              <th>Chi tiết</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Cấu trúc thư mục</td>
-              <td>
-                Xây dựng cấu trúc thư mục cho mã nguồn frontend, phân chia các
-                thành phần như components, pages, assets, services.
-              </td>
-            </tr>
-            <tr>
-              <td>Thiết kế giao diện người dùng</td>
-              <td>
-                Cải tiến giao diện người dùng theo các wireframes và mockups.
-                Cài đặt các thư viện UI (Bootstrap, Material UI).
-              </td>
-            </tr>
-            <tr>
-              <td>Xử lý sự kiện</td>
-              <td>
-                Lập trình các hành động khi người dùng tương tác với giao diện.
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <button class="expand-btn" onclick="toggleContent(6)">
-        3. Phát triển Back-End
-      </button>
-      <div class="content" id="content-6">
-        <table>
-          <thead>
-            <tr>
-              <th>Nội dung</th>
-              <th>Chi tiết</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Xây dựng API</td>
-              <td>
-                Xây dựng các API cho ứng dụng, bao gồm các chức năng như đăng
-                nhập, đăng ký...
-              </td>
-            </tr>
-            <tr>
-              <td>Quản lý cơ sở dữ liệu</td>
-              <td>
-                Thiết lập cơ sở dữ liệu và viết các câu lệnh SQL để thao tác với
-                dữ liệu.
-              </td>
-            </tr>
-            <tr>
-              <td>Xử lý xác thực và phân quyền</td>
-              <td>
-                Cài đặt hệ thống xác thực người dùng và phân quyền truy cập.
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <button class="expand-btn" onclick="toggleContent(7)">
-        4. Kết nối Front-End với Back-End
-      </button>
-      <div class="content" id="content-7">
-        <p>
-          Giao tiếp API và quản lý trạng thái ứng dụng với các thư viện như
-          Redux hoặc Context API trong React.
-        </p>
-      </div>
-      <button class="expand-btn" onclick="toggleContent(8)">
-        5. Tích hợp các tính năng chính
-      </button>
-      <div class="content" id="content-8">
-        <table>
-          <thead>
-            <tr>
-              <th>Tính năng</th>
-              <th>Chi tiết</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Đăng ký và đăng nhập</td>
-              <td>
-                Thiết lập các chức năng cho phép người dùng đăng ký và đăng
-                nhập.
-              </td>
-            </tr>
-            <tr>
-              <td>Tìm kiếm và lọc</td>
-              <td>
-                Tạo chức năng tìm kiếm bài học và các công cụ lọc dữ liệu.
-              </td>
-            </tr>
-            <tr>
-              <td>Thống kê và báo cáo</td>
-              <td>Xây dựng các báo cáo thống kê cho quản trị viên.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <button class="expand-btn" onclick="toggleContent(9)">6. Kiểm thử</button>
-      <div class="content" id="content-9">
-        <p>
-          Thực hiện kiểm thử đơn vị, kiểm thử tích hợp và kiểm thử giao diện
-          người dùng.
-        </p>
-      </div>
-      <button class="expand-btn" onclick="toggleContent(10)">
-        7. Triển khai và cập nhật
-      </button>
-      <div class="content" id="content-10">
-        <table>
-          <thead>
-            <tr>
-              <th>Nội dung</th>
-              <th>Chi tiết</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Triển khai trên server</td>
-              <td>Đưa ứng dụng lên các môi trường như AWS, Heroku.</td>
-            </tr>
-            <tr>
-              <td>Cập nhật thường xuyên</td>
-              <td>Duy trì và cập nhật các tính năng.</td>
-            </tr>
-            <tr>
-              <td>Tối ưu hóa SEO và hiệu suất</td>
-              <td>Đảm bảo rằng ứng dụng tải nhanh và tìm kiếm dễ dàng.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <button class="expand-btn" onclick="toggleContent(11)">
-        8. Quản lí phiên bản và tích hợp liên tục(CI/CD)
-      </button>
-      <div class="content" id="content-11">
-        <p>
-          Sử dụng Git để theo dõi thay đổi và thiết lập các pipeline tự động để
-          kiểm thử và triển khai ứng dụng.
-        </p>
-      </div>
-      <button class="expand-btn" onclick="toggleContent(12)">
-        9.Bảo mật và dự phòng
-      </button>
-      <div class="content" id="content-12">
-        <p>
-          Cài đặt các biện pháp bảo mật như mã hóa mật khẩu và thiết lập hệ
-          thống sao lưu dữ liệu.
-        </p>
-      </div>
-      <button class="expand-btn" onclick="toggleContent(13)">
-        10. Tài liệu và hướng dẫn sử dung
-      </button>
-      <div class="content" id="content-13">
-        <p>
-          Cung cấp tài liệu kỹ thuật chi tiết về kiến trúc hệ thống và hướng dẫn
-          người dùng sử dụng các tính năng của ứng dụng.
-        </p>
-      </div>
-    </section>
-    <script>
-      // JavaScript to handle tab switching
-      const tabs = document.querySelectorAll(".nav-link");
-      const sections = document.querySelectorAll(".content-section");
-
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          // Remove active class from all tabs and sections
-          tabs.forEach((t) => t.classList.remove("active"));
-          sections.forEach((section) => section.classList.remove("active"));
-
-          // Add active class to clicked tab and related section
-          tab.classList.add("active");
-          const target = tab.getAttribute("data-tab");
-          document.getElementById(target).classList.add("active");
-        });
-      });
-    </script>
-    <!------------------------------------------->
-
     <footer>
       <div class="footer-container">
         <div class="footer-group-info">
-          <h3>GROUP 20</h3>
+          <h3>GROUP 11</h3>
           <p>
-            Hồ Chí Minh Nông Lâm University<br />Thủ Đức City, Hồ Chí Minh City,
-            Việt Nam
+            Nong Lam University - Ho Chi Minh City
           </p>
           <p>Phone: 0349647423<br />Email: 23130004@st.hcmuaf.edu.vn</p>
         </div>
@@ -576,16 +163,21 @@
             <li><a href="AboutUs.html">About us</a></li>
             <li><a href="Groupdiary.html">Group diary</a></li>
             <li><a href="project.html">Project</a></li>
+            <li><a href="result.html">Result</a></li>
           </ul>
         </div>
 
         <div class="footer-members">
           <h4>Our Members</h4>
           <ul>
-            <li><a href="https:/">Chu Tấn Tài</a></li>
-            <li><a href="https:/">Châu Thị Thúy Quỳnh</a></li>
+            <li><a href="https://taiplatform.github.io/">Chu Tấn Tài</a></li>
             <li>
-              <a href="https://tranlephucan.github.io/web/">Trần Lê Phúc An</a>
+              <a href="https://thuyqynh.github.io/BT_lab1/index.html"
+                >Châu Thị Thúy Quỳnh</a
+              >
+            </li>
+            <li>
+              <a href="https://tranlephucan.github.io/web">Trần Lê Phúc An</a>
             </li>
           </ul>
         </div>
@@ -595,23 +187,34 @@
           <form>
             <input type="email" placeholder="Email is here" required />
             <button type="submit">Submit</button>
-          </form>
-        </div>
+          </form> <br>
+          <!-- Phần đóng góp ý kiến -->
+          <div class="footer-feedback">
+            <h4><i class="fa fa-envelope"></i> Gửi ý kiến đóng góp</h4>
+            <form action="mailto:23130004@st.hcmuaf.edu.vn" method="POST" enctype="text/plain">
+              <textarea name="feedback" rows="4" placeholder="Nhập ý kiến của bạn tại đây..." required></textarea>
+              <button type="submit">Gửi ý kiến</button>
+            </form>
+          </div>
+
+        <!-- Thêm Font Awesome để hiển thị biểu tượng lá thư -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
       </div>
     </footer>
     <script>
-      // use for color button when active
-      document.querySelectorAll(".nav-link").forEach((tab) => {
-        tab.addEventListener("click", (e) => {
-          document
-            .querySelectorAll(".nav-link")
-            .forEach((t) => t.classList.remove("active"));
-          e.target.classList.add("active");
-          updateTable(e.target.getAttribute("data-week"));
+      // Function to show content based on button click
+      function showContent(contentId) {
+        // Hide all content sections
+        document.querySelectorAll(".content-section").forEach((section) => {
+          section.style.display = "none";
         });
-      });
+
+        // Show the selected content section
+        document.getElementById(contentId).style.display = "block";
+      }
     </script>
-    <script src="js/projecst.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
 </html>
