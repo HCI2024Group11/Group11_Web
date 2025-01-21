@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Learning Platform</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <style>
+    .design-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .design-item {
+      text-align: center;
+      background-color: #f9f9f9;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .design-item img {
+      max-width: 100%;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .design-item h3 {
+      font-size: 1.2rem;
+      color: #333;
+    }
+    .download-btn {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .download-btn:hover {
+    background-color: #0056b3;
+  }
+
+  #download-all-btn {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #289aa7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #download-all-btn:hover {
+    background-color: #15463d;
+  }
+  </style>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="home.html">
+          <h1>GROUP 11</h1>
+        </a>
+      </div>
+
+      <div class="project-button">
+        <nav>
+          <ul>
+            <li><a class="text-primary" href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="groupDiary.html">Group diary</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="result.html">Result</a></li>
+            <li><a href="styleguide.html">Style Guide</a></li>
+            <li>
+              <a
+                href="https://hci2024group11.github.io/Project_Web/"
+                class="btn"
+              >
+                Go to project
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="projectBigText">
+      <h1>Project</h1>
+    </div>
+
+    <div class="main-container">
+      <aside class="sidebar">
+        <ul>
+          <li>
+            <button onclick="showContent('requirement')">Requirement</button>
+          </li>
+          <li><button onclick="showContent('design')">Design</button></li>
+          <li>
+            <button onclick="showContent('implementation')">
+              Implementation
+            </button>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="content">
+        <div id="requirement" class="content-section" style="display: none">
+          <h2>Project Requirements</h2>
+          <table id="projectRequirementsTable" class="table">
+            <thead>
+              <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Chức năng</th>
+                <th scope="col">Người đề xuất</th>
+                <th scope="col">Người thiết kế</th>
+                <th scope="col">Người thực hiện</th>
+                <th scope="col">Thời gian dự kiến</th>
+                <th scope="col">Trạng thái</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Tạo trang courses, flashcards</td>
+                <td>Chu Tấn Tài</td>
+                <td>Chu Tấn Tài</td>
+                <td>Chu Tấn Tài</td>
+                <td>30/12/2024 - 05/1/2025</td>
+                <td>Hoàn thành</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Tạo trang general-english, Blog</td>
+                <td>Châu Thị Thúy Quỳnh</td>
+                <td>Châu Thị Thúy Quỳnh</td>
+                <td>Châu Thị Thúy Quỳnh</td>
+                <td>30/12/2024 - 05/1/2025</td>
+                <td>Hoàn thành</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Tạo trang login,test, skills</td>
+                <td>Trần Lê Phúc An</td>
+                <td>Trần Lê Phúc An</td>
+                <td>Trần Lê Phúc An</td>
+                <td>30/12/2024 - 05/1/2025</td>
+                <td>Hoàn thành</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="design" class="content-section" style="display: none">
+          <h2>Project Design</h2>
+          <button id="download-all-btn" onclick="downloadAll1()">Tải tất cả hình</button>
+          <div class="design-grid">
+               <div class="design-item">
+              <h3>Login/signup</h3>
+              <img src="img/login.jpg" alt="Design 1" />
+              <button class="download-btn" onclick="downloadImage1('img/login.jpg', 'login.jpg')">Tải hình</button>
+               </div>
+            <div class="design-item">
+              <h3>Menu bar</h3>
+              <img src="img/menu.jpg" alt="Design 2" />
+              <button class="download-btn" onclick="downloadImage1('img/menu.jpg', 'menu.jpg')">Tải hình</button>
+            </div>
+            <div class="design-item">
+              <h3>Contact</h3>
+              <img src="img/cont.jpg" alt="Design 3" />  
+              <button class="download-btn" onclick="downloadImage1('img/cont.jpg', 'cont.jpg')">Tải hình</button>          
+            </div>
+            <div class="design-item">
+              <h3>Test</h3>
+              <img src="img/test1.jpg" alt="Design 4" />
+              <button class="download-btn" onclick="downloadImage1('img/test1.jpg', 'test1.jpg')">Tải hình</button>
+            </div>
+            <div class="design-item">
+              <h3>Course</h3>
+              <img src="img/course1.jpg" alt="Design 5" />
+              <button class="download-btn" onclick="downloadImage1('img/course1.jpg', 'course1.jpg')">Tải hình</button>
+          </div>
+          <div class="design-item">
+            <h3>Skill</h3>
+            <img src="img/skill1.jpg" alt="Design 6" />
+            <button class="download-btn" onclick="downloadImage1('img/skill1.jpg', 'skill1.jpg')">Tải hình</button>
+          </div>
+          <div class="design-item">
+            <h3>Flashcards</h3>
+            <img src="img/flashcards1.jpg" alt="Design 7" />
+            <button class="download-btn" onclick="downloadImage1('img/flashcards1.jpg', 'flashcards1.jpg')">Tải hình</button>
+          </div>
+          <div class="design-item">
+            <h3>Blog</h3>
+            <img src="img/blog1.jpg" alt="Design 8" />
+            <button class="download-btn" onclick="downloadImage1('img/blog1.jpg', 'blog1.jpg')">Tải hình</button>
+          </div>
+          <div class="design-item">
+            <h3>General-english</h3>
+            <img src="img/gene1.jpg" alt="Design 9" />
+            <button class="download-btn" onclick="downloadImage1('img/gene1.jpg', 'gene1.jpg')">Tải hình</button>
+          </div>
+        </div>
+        </div>
+
+        <div id="implementation" class="content-section" style="display: none">
+          <h2>Project Implementation</h2>
+          <button id="download-all-btn" onclick="downloadAll2()">Tải tất cả hình</button>
+          <div class="design-grid">
+               <div class="design-item">
+              <h3>Login</h3>
+              <img src="img/login2.png" alt="Design 1" />
+              <button class="download-btn" onclick="downloadImage1('img/login2.png', 'login2.png')">Tải hình</button>
+               </div>
+               <div class="design-item">
+                <h3>Signup</h3>
+                <img src="img/signup2.png" alt="Design 1" />
+                <button class="download-btn" onclick="downloadImage1('img/signup2.png', 'signup2.png')">Tải hình</button>
+                 </div>
+            <div class="design-item">
+              <h3>Menu bar</h3>
+              <img src="img/menu2.png" alt="Design 2" />
+              <button class="download-btn" onclick="downloadImage1('img/menu2.png', 'menu2.png')">Tải hình</button>
+            </div>
+            <div class="design-item">
+              <h3>Contact</h3>
+              <img src="img/contac2.png" alt="Design 3" />  
+              <button class="download-btn" onclick="downloadImage1('img/contac2.png', 'contac2.png')">Tải hình</button>          
+            </div>
+            <div class="design-item">
+              <h3>Test</h3>
+              <img src="img/tét.png" alt="Design 4" />
+              <button class="download-btn" onclick="downloadImage1('img/tét.jpg', 'tét.jpg')">Tải hình</button>
+            </div>
+            <div class="design-item">
+              <h3>Course</h3>
+              <img src="img/course.png" alt="Design 5" />
+              <button class="download-btn" onclick="downloadImage1('img/course.png', 'course1.png')">Tải hình</button>
+          </div>
+          <div class="design-item">
+            <h3>Skill</h3>
+            <img src="img/skill.png" alt="Design 6" />
+            <button class="download-btn" onclick="downloadImage1('img/skill.png', 'skill.png')">Tải hình</button>
+          </div>
+          <div class="design-item">
+            <h3>Flashcards</h3>
+            <img src="img/flashcards.png" alt="Design 7" />
+            <button class="download-btn" onclick="downloadImage1('img/flashcards.png', 'flashcards.png')">Tải hình</button>
+          </div>
+          <div class="design-item">
+            <h3>Blog</h3>
+            <img src="img/blog.png" alt="Design 8" />
+            <button class="download-btn" onclick="downloadImage1('img/blog.png', 'blog.png')">Tải hình</button>
+          </div>
+          <div class="design-item">
+            <h3>General-english</h3>
+            <img src="img/general.png" alt="Design 9" />
+            <button class="download-btn" onclick="downloadImage1('img/general.png', 'general.png')">Tải hình</button>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-group-info">
+          <h3>GROUP 11</h3>
+          <p>
+            Nong Lam University - Ho Chi Minh City
+          </p>
+          <p>Phone: 0349647423<br />Email: 23130004@st.hcmuaf.edu.vn</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a class="text-primary" href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="groupDiary.html">Group diary</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="result.html">Result</a></li>
+            <li><a href="styleguide.html">Style Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-members">
+          <h4>Our Members</h4>
+          <ul>
+            <li><a href="https://taiplatform.github.io/">Chu Tấn Tài</a></li>
+            <li>
+              <a href="https://thuyqynh.github.io/BT_lab1/index.html"
+                >Châu Thị Thúy Quỳnh</a
+              >
+            </li>
+            <li>
+              <a href="https://tranlephucan.github.io/web">Trần Lê Phúc An</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <form>
+            <input type="email" placeholder="Email is here" required />
+            <button type="submit">Submit</button>
+          </form> <br>
+          <!-- Phần đóng góp ý kiến -->
+          <div class="footer-feedback">
+            <h4><i class="fa fa-envelope"></i> Gửi ý kiến đóng góp</h4>
+            <form action="mailto:23130004@st.hcmuaf.edu.vn" method="POST" enctype="text/plain">
+              <textarea name="feedback" rows="4" placeholder="Nhập ý kiến của bạn tại đây..." required></textarea>
+              <button type="submit">Gửi ý kiến</button>
+            </form>
+          </div>
+
+        <!-- Thêm Font Awesome để hiển thị biểu tượng lá thư -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+      </div>
+    </footer>
+    <script>
+      function showContent(contentId) {
+        document.querySelectorAll(".content-section").forEach((section) => {
+          section.style.display = "none";
+        });
+        document.getElementById(contentId).style.display = "block";
+      }
+    </script>
+    <script>
+  // Hàm tải một hình ảnh
+  function downloadImage1(url, filename) {
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  // Hàm tải tất cả hình ảnh
+  function downloadAll1() {
+    const images = [
+    { url: 'img/login.jpg', filename: 'login.jpg' },
+    { url: 'img/cont.jpg', filename: 'cont.jpg' },
+    { url: 'img/menu.jpg', filename: 'menu.jpg' },
+    { url: 'img/test1.jpg', filename: 'test1.jpg' },
+    { url: 'img/course1.jpg', filename: 'course1.jpg' },
+      { url: 'img/skill1.jpg', filename: 'skill1.jpg' },
+      { url: 'img/flashcards1.jpg', filename: 'flashcards1.jpg' },
+      { url: 'img/blog1.jpg', filename: 'blog1.jpg' },
+      { url: 'img/gene1.jpg', filename: 'gene1.jpg' }
+    ];
+
+    images.forEach((image) => {
+      downloadImage(image.url, image.filename);
+    });
+  }
+  // Hàm tải tất cả hình ảnh
+  function downloadAll2() {
+    const images = [
+    { url: 'img/login2.png', filename: 'login2.png' },
+    { url: 'img/signup2.png', filename: 'signup2.png' },
+    { url: 'img/contac2.png', filename: 'contac2.png' },
+    { url: 'img/menu2.png', filename: 'menu2.png' },
+    { url: 'img/tét.png', filename: 'tét.png' },
+    { url: 'img/course.png', filename: 'course.png' },
+      { url: 'img/skill.png', filename: 'skill.png' },
+      { url: 'img/flashcards.png', filename: 'flashcards.png' },
+      { url: 'img/blog.png', filename: 'blog.png' },
+      { url: 'img/general.png', filename: 'general.png' }
+    ];
+
+    images.forEach((image) => {
+      downloadImage(image.url, image.filename);
+    });
+  }
+</script>
+
+  </body>
+</html>
