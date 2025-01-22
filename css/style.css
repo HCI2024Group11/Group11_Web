@@ -400,7 +400,7 @@ footer {
 footer .footer-feedback button {
   padding: 10px 20px;
   border-radius: 50px; /* Làm cho button tròn */
-  background-color: #00b33c; /* Màu nền của button */
+  background-color: #5ab9ea; /* Màu nền của button */
   color: white; /* Màu chữ */
   border: none; /* Xóa viền mặc định */
   cursor: pointer; /* Hiển thị con trỏ chuột dạng tay */
@@ -530,16 +530,27 @@ li {
 }
 
 .sidebar ul li button {
-  width: 100%;
-  padding: 10px;
-  background-color: #00172d;
-  color: white;
-  border: none;
-  cursor: pointer;
+  border-radius: 8px; /* Bo góc */
+  width: 160px; /* Chiều rộng cố định */
+  height: 40px; /* Chiều cao cố định */
+  padding: 0; /* Đảm bảo kích thước button không bị ảnh hưởng bởi padding */
+  background-color: var(--background-color-dark-blue); /* Màu nền */
+  color: white; /* Màu chữ */
+  border: none; /* Loại bỏ viền */
+  cursor: pointer; /* Con trỏ khi hover */
+  text-align: center; /* Căn giữa nội dung */
+  line-height: 40px; /* Căn chữ theo chiều dọc */
+  font-size: 14px; /* Kích thước chữ */
+  white-space: nowrap; /* Tránh xuống dòng */
+  overflow: hidden; /* Ẩn nội dung nếu quá dài */
+  text-overflow: ellipsis; /* Thêm dấu "..." nếu nội dung vượt quá chiều rộng */
 }
 
+/* Hiệu ứng khi hover button */
 .sidebar ul li button:hover {
-  background-color: #555;
+  background-color: #555; /* Màu khi hover */
+  transform: scale(1.05); /* Hiệu ứng phóng to nhẹ */
+  transition: 0.3s; /* Thời gian chuyển đổi hiệu ứng */
 }
 
 .content {

@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.top {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.top::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: #4a90e2;
+    border-radius: 2px;
+}
+
+.container {
+    display:  flex; 
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.nav {
+     border-right: 1px solid #eee;
+     padding-right: 20px;
+     list-style-type: none; /* Xóa dấu chấm */
+     padding-left: 0; /* Bỏ thụt lề mặc định */
+     height: 100%; /* Hoặc giá trị khác như 500px, 80vh */
+     min-height: 400px; /* Đảm bảo chiều cao tối thiểu */
+ }
+
+
+.nav-link {
+    display: block;
+    padding: 15px 20px;
+    color: #666;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover, .nav-link.active {
+    background: #4a90e2;
+    color: white;
+    transform: translateX(5px);
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+.tab-pane {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.col {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    h1{
+        margin-bottom: 15px;
+        color:#333;
+    }
+     h2, h3 {
+        margin-bottom: 15px;
+        color:#333;
+    }
+}
+
+.col:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+footer p {
+    color: white;  /* Màu chữ trắng */
+  }
+  
+
+p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.Color p {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    text-align: center;
+}
+.Color p {
+    width: 100px; /* Chiều rộng của ô */
+    height: 100px; /* Chiều cao của ô, bằng chiều rộng để tạo hình vuông */
+    margin: 10px 10px; /* Khoảng cách giữa các ô */
+    display: inline-block; /* Giúp các ô hiển thị ngang hàng (tuỳ chọn) */
+    line-height: 50px; /* Căn chỉnh văn bản nằm giữa ô (nếu cần) */
+    text-align: center; /* Căn giữa văn bản */
+    font-weight: bold; /* Tăng độ dày cho chữ (tuỳ chọn) */
+    color: white; /* Màu chữ bên trong */
+    border-radius: 5px; /* Bo góc nhẹ cho ô (tuỳ chọn) */
+}
+
+.cl1{ background:  #03284f; }
+.cl2{ background:  #00bfff}
+.cl3{ background:  #5ab9ea}
+.cl4{ background:  #00b33c; }
+.cl5{ background:  #666; }
+.cl6{ background:  #333; }
+
+.cl7{ background:   #03284f; }
+.cl8{ background:  #35509a}
+.cl9{ background:  #5ab9ea}
+.cl10{ background:  #00b33c; }
+.cl11{ background:  #666; }
+.cl12{ background:  #333; }
+
+
+
+.avt, .avt1, .Ab, .Ab1 {
+    background: #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+.Bt0{
+    padding: 10px 20px;
+    border-radius: 50px; /* Làm cho button tròn */
+    background-color: #5ab9ea; /* Màu nền của button */
+    color: white; /* Màu chữ */
+    border: none; /* Xóa viền mặc định */
+    cursor: pointer; /* Hiển thị con trỏ chuột dạng tay */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu khi hover */
+  }
+  
+  .Bt0:hover {
+    background-color: var(--background-color-light-blue); /* Màu nền khi hover */
+  }
+  
+/* Thuộc tính cơ bản áp dụng cho cả Bt, Bt1 và Bt2 */
+.Bt, .Bt1, .Bt2 {
+    padding: 10px 20px;
+    border-radius: 5px; /* Bo góc */
+    border: none; /* Không viền */
+    text-decoration: none; /* Bỏ gạch dưới */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Phong cách riêng của Bt */
+.Bt {
+    background-color: #007bff; /* Màu nền */
+    color: #ffffff; /* Màu chữ */
+    box-shadow: none; /* Không bóng hộp */
+    text-shadow: none; /* Không bóng chữ */
+}
+
+.Bt:hover {
+    background-color: #0056b3; /* Màu nền khi hover */
+}
+
+/* Phong cách riêng của Bt1 */
+.Bt1 {
+    background-color: #3b5998; /* Màu nền xanh đậm */
+    color: white; /* Màu chữ */
+    box-shadow: 0 4px 6px rgba(59, 89, 152, 0.2); /* Bóng hộp nhẹ */
+}
+
+.Bt1:hover {
+    background-color: #2d4373; /* Màu nền khi hover */
+    transform: translateY(-2px); /* Nâng nút khi hover */
+    box-shadow: 0 6px 8px rgba(59, 89, 152, 0.3); /* Bóng hộp tăng khi hover */
+}
+
+/* Phong cách riêng của Bt2 */
+.Bt2 {
+    background-color: white; /* Màu nền trắng */
+    color: #666; /* Màu chữ xám */
+    border: 2px solid #e0e0e0; /* Viền nhẹ */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bóng hộp nhẹ */
+}
+
+.Bt2:hover {
+    background-color: #666; /* Màu nền nhạt hơn khi hover */
+    color: #ffffff; /* Màu chữ đậm hơn khi hover */
+    border-color: #ccc; /* Viền đậm hơn khi hover */
+    transform: translateY(-2px); /* Nâng nút khi hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Bóng hộp tăng khi hover */
+
+   
+}
+
+/* Active state */
+.Bt1:active{
+    transform: translateY(1px); /* Nút nhấn xuống */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bóng hộp giảm khi nhấn */
+}
+.Bt2:active {
+    background-color: #666666; /* Màu nền xám khi nhấn */
+    color: #ffffff; /* Màu chữ trắng khi nhấn */
+    border-color: #666; /* Đổi màu viền cùng màu nền */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Giảm bóng khi nhấn */
+    transform: translateY(1px); /* Nhấn xuống nhẹ */
+  
+}
+
+.Ic img {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.Ic img:hover {
+    transform: scale(1.2);
+}
+.avatar-img {
+    width: 150px; /* Kích thước ảnh */
+    height: 150px; /* Kích thước ảnh */
+    border-radius: 50%; /* Làm tròn ảnh */
+    display: block; /* Đảm bảo ảnh là phần tử khối để căn giữa */
+    object-fit: cover; /* Đảm bảo ảnh giữ tỷ lệ và không bị biến dạng */
+    margin: 0 auto; /* Căn giữa ảnh trong div */
+}
+.Ab-img {
+    width: 180px; /* Đặt chiều rộng ảnh là 180px */
+    height: 280px; /* Đặt chiều cao ảnh là 280px */
+    object-fit: cover; /* Đảm bảo ảnh không bị kéo dãn và cắt ảnh cho phù hợp */
+    border-radius: 8px; /* Nếu bạn muốn bo góc cho ảnh */
+  }
+  .Ab1-img {
+    width: 280px; /* Đặt chiều rộng ảnh là 180px */
+    height: 180px; /* Đặt chiều cao ảnh là 280px */
+    object-fit: cover; /* Đảm bảo ảnh không bị kéo dãn và cắt ảnh cho phù hợp */
+    border-radius: 8px; /* Nếu bạn muốn bo góc cho ảnh */
+  }
+  
+  
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .nav {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 20px;
+    }
+}
